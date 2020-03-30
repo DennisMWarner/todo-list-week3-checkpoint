@@ -10,6 +10,9 @@ export default class List {
   //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
   get Template() {
     return /*html*/ `
-    <div class="col-12 bg-primary" id="${this.id}">${this.listTitle}</div>`;
+    
+    <div class="col-10" id="${this.id}"><h3>${this.listTitle}</h3></div>
+    <div class="col-1"><button type="button"class="borderless-button">
+    <i class="fa fa-minus-square text-danger fa-3x" onclick="app.listController.deleteList(this.id)"></i></div>`;
   }
 }

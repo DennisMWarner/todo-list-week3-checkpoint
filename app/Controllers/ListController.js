@@ -28,4 +28,8 @@ export default class ListController {
     listData.reset();
     _drawLists();
   }
+  deleteList(listId) {
+    _store.State.lists.splice(_store.State.lists.indexOf(listId), 1);
+    _drawLists();
+  }
 }
