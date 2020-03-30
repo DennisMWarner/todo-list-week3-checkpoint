@@ -15,48 +15,52 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="assets/style.css" />
 
     <title>To-Do List</title>
   </head>
   <body>
-    <header class="container-fluid bg-dark text-center text-light">
-      <div class="row">
-        <div class= "col-12"> <h1>Listy Boi</h1></div>
+    <header class="container-fluid">
+      <div class="row  mt-5">
+        <div
+          class="col-10 bg-info text-center rounded shadow text-light m-auto"
+        >
+          <h1>To-Do To-Done</h1>
+        </div>
       </div>
     </header>
-    <main class="container-fluid bg-light text-dark">
+    <main class="container-fluid text-dark">
       <div class="row">
-        <div class= "col-12">
-          <h1>MAIN</h1>
-        </div>
+        <div class="col-12 mt-5"></div>
       </div>
-      <div class="row justify-content-between" id="listsList">
-        
+      <div class="row m-auto" id="listsList">
         <!-- inject lists here-->
       </div>
-      <div class="row">
-            <div class="col-12">
-              <form class="w-25" onSubmit="app.listController.addList(event)">
-                <div class="form-group">
-                    
-                    <input type="text" name="listName" class="form-control" placeholder="Enter new list...">
-                </div>
-                <button type="submit" class="borderless-button">
-                  <i class="fa fa-plus-square text-success fa-4x"></i>
-
-                </button>
-            </form>
+      <div class="row text-right">
+        <div class="col-12">
+          <form
+            class="w-75 m-auto rounded"
+            onSubmit="app.listController.addList(event)"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="listName"
+                class="form-control rounded shadow"
+                placeholder='Enter a new "To-Do" list here...'
+              />
             </div>
+            <button type="submit" class="borderless-button">
+              <i class="fa fa-plus-square text-success fa-3x"></i>
+            </button>
+          </form>
         </div>
-    
-    </main>
-    <footer class="container-fluid bg-secondary text-light text-center">
-      <div class="row">
-        <div class= "col-12"> <h1>FOOTER</h1></col-12>
       </div>
-    </footer>
+    </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -75,7 +79,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    
+
     <script type="module" src="app/main.js"></script>
   </body>
 </html>
