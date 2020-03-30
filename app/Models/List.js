@@ -11,7 +11,7 @@ export default class List {
   get Template() {
     return /*html*/ `
     
-    <div class="col-3 bg-warning rounded text-light text-left m-3 shadow" id="${this.id}"><h3>${this.listTitle}</h3>
+    <div class="col-md-3 bg-warning rounded text-light text-left m-3 shadow" id="${this.id}"><h3>${this.listTitle}</h3>
       <div class="row ">
         <div class="col-1 offset-10 text-right">
           <button type="button"class="borderless-button offset-button">
