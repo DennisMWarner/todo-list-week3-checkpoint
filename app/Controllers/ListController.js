@@ -5,7 +5,7 @@ import _store from "../store.js";
 function _drawLists() {
   let template = "";
   let lists = _store.State.lists;
-
+  console.log(_store.State.lists);
   lists.forEach(list => (template += list.Template));
   document.getElementById("listsList").innerHTML = template;
 }
@@ -29,7 +29,11 @@ export default class ListController {
     _drawLists();
   }
   deleteList(listId) {
-    _store.State.lists.splice(_store.State.lists.indexOf(listId), 1);
+    console.log(listId);
+    console.log("deleteList called...");
+    _store.State.lists = _store.State.lists.filter(
+      element => element.id != listId
+    );
     _drawLists();
   }
 }

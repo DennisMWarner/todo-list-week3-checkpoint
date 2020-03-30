@@ -8,9 +8,12 @@ class ListService {
   //what methods will you need to do when this class is first 'constructed'?
   //NOTE You will need this code to persist your data into local storage, be sure to call the store method to save after each change
   addList(newListData) {
-    let newList = new List(newListData);
-    _store.State.lists.push(newList);
-    //console.log(_store.State.lists);
+    if (newListData.listTitle) {
+      let newList = new List(newListData);
+      _store.State.lists.push(newList);
+      //console.log(_store.State.lists);
+    }
+    return;
   }
 }
 const SERVICE = new ListService();

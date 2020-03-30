@@ -13,6 +13,6 @@ export default class List {
     
     <div class="col-10" id="${this.id}"><h3>${this.listTitle}</h3></div>
     <div class="col-1"><button type="button"class="borderless-button">
-    <i class="fa fa-minus-square text-danger fa-3x" onclick="app.listController.deleteList(this.id)"></i></div>`;
+    <i class="fa fa-minus-square text-danger fa-3x" onclick="app.listController.deleteList('${this.id}')"></i></div>`;
   }
 }
